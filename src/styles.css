@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Direction: solid, trustworthy, no-nonsense. Slate ink, warm paper, safety-orange accent. */
+@theme {
+	--font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+	--font-display: "Barlow Condensed", "Barlow", ui-sans-serif, sans-serif;
+	--color-paper: #f6f3ee;
+	--color-card: #ece7df;
+	--color-ink: #17181a;
+	--color-muted: #5d5f63;
+	--color-line: #ddd6cb;
+	--color-accent: #e8590c;
+	--color-accent-ink: #ffffff;
+	--radius-card: 0.5rem;
+}
+
+html {
+	background: var(--color-paper);
+	color: var(--color-ink);
+	color-scheme: light;
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-sans);
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 2px;
+}
+
+.field {
+	width: 100%;
+	min-height: 3rem;
+	border: 1px solid var(--color-line);
+	border-radius: var(--radius-card);
+	background: #fff;
+	padding: 0.65rem 0.9rem;
+	font: inherit;
+	color: var(--color-ink);
+}
+
+.field:focus {
+	border-color: var(--color-accent);
+	outline: none;
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
